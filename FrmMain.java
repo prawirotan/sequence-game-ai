@@ -55,12 +55,16 @@ public class FrmMain extends JFrame implements Runnable{
         c.gridx = 6; c.gridy = 0;
         add(pnlPlayer, c);
 
+
+
         //Button start game
         JButton btnPlay = new JButton("Start Game");
         btnPlay.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+
                 initializeGame();
+                
                 resetDisplay();
                 if(mainModel.isCurrentPlayerAi()){
                     (new Thread(FrmMain.this)).start();
@@ -70,6 +74,7 @@ public class FrmMain extends JFrame implements Runnable{
                 }*/
             }
         });
+        
         //add(btnPlay);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridwidth = GridBagConstraints.REMAINDER;
@@ -392,6 +397,7 @@ public class FrmMain extends JFrame implements Runnable{
                 nextTurn();
             }
 
+            
         }
     }
 

@@ -538,9 +538,9 @@ public class GameModel {
         for(int i=0; i<ttlPlayers; i++){
             if(isAi[i]){
                 if(i%2 == 0){
-                    players.add(new AIGroup3(i+1, Player.TEAM_1, this));
+                    players.add(new AIGroup5(i+1, Player.TEAM_1, this));
                 }else{
-                    players.add(new AIGroup5(i+1, Player.TEAM_2, this));
+                    players.add(new AIGroup6(i+1, Player.TEAM_2, this));
                 }
             }
             else{
